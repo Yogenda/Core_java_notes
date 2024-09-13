@@ -1,0 +1,135 @@
+Today's Agenda
+-----------------
+Inner Classes
+Exception Handling
+-----------------
+Inner Classes :- 
+
+A class within the class is  called as Inner Class. 
+
+class <outer class>
+{
+	.................
+	class <innerclass>
+	{
+		..........
+	}
+}
+
+purpose :-  
+to access one class private members into another class without loosing data security. 
+
+class Outer
+{
+	private int x, y;
+	void get()
+	{
+		x, y variables can be access here
+	}
+	class Inner
+	{
+		x, y variables can also be access here
+	}
+}
+
+there are different types of inner classes :- 
+
+1.  Member Inner Class :- 
+		these class are created within another class, here to create object for inner classes
+		follow below given syntax
+
+		OuterClass.InnerClass  <object> =  OuterClassObj.  new InnerClass();
+
+2.  Local Inner Class
+		these classes are created within the outer class method, then it is called as Local 		Inner Class. Here  it is possiable to create for inner class outside of that method. 
+		so that, create object and calling methods has to be done within the same method. 
+	
+3.  Static Inner Class
+		These classes are used to handle outer class static data. Since it is static inner 		class,  no need to depend on outer class objcet to create object for inner class. 
+ 
+		OuterClass.InnerClass <object> = new OUterClass.InnerClass();
+
+Note :- An outer class also provides a facility to create an Interface also. That interface has to be implemeted to Inner class only. 
+--------------------------------------------------------------------
+Exception Handling :- 
+Every programming lang have error handling process. Generally there are two types of errors we can found in coding. 
+
+1.  Compile Time Errors :-  these are occurs at the time coding/compilation of the program. Ususally Syntax errors/Improper usage of commands.
+				1.  Missing Semi Colon
+				2.  Missing Double Quotes
+				3.  Array Index Invalid
+				4.  Spelling mistakes
+2.  Run  Time Errors:-  these are occures at the time of program executing. 
+				1.  Whenever we enter invalid inputs.
+				2.  Invalid Operations
+				3.  when proper software and hardware is not found. 
+
+Exception Handling :-  
+it is the process of handling run-time errors/an abnormal situtation of the program. 
+Java Provides following keywords :-   try, catch, finally, throw, throws
+
+try :-  It holds actual program, while executing program, it checks for any error occurs, if it found then it sends to catch block. 
+
+catch :-  this block recives error info from try block and allows to perform alternative action of the program. 
+
+
+try
+{
+	..........
+	Actual Program
+	..........
+}
+catch(ExceptionName Obj)
+{
+	......
+	alternative code
+	......
+}
+finally
+{
+	code must execute
+}
+
+
+All the exceptions are identified by it's own class called as Exception Classes and these all classes are child classes of a parent class by name "Exception". 
+
+Exception allows to handle any type of exception. 
+
+try block can have multple catch blocks. Each  catch block handle one separate exception. here we must know that exception name. 
+
+finally :-  this block is meant for executing set of stmts irrespective of the exception. 
+		Program may or may not raise an exception, this block will be executed. 
+
+
+Classification of Exceptions :- 
+--------------------------------
+
+1.  Unchecked Exceptions :-  these exceptions are identified and handled at the time of program execution by the compiler / JVM. 
+			these are handled with try and catch block. 
+2.  Checked Exceptions  :-  these exceptions are identified at the time of coding / compliation by the compiler / JVM. 
+		these are handled with "throws" keyword.
+		
+		void  methodname(...)  throws ExceptionName
+		{
+			.............
+		}
+
+3.  User Defined Exceptions :-  these exceptions are created, raised and handled by the developer only
+Purpose of this type of exceptions is to implement some business rules of the application. 
+
+Steps :- 
+
+1.  Create a class for exception  and extends  Exception class
+
+class  Classname  extends Exception
+{
+	constructor(arguments)
+	{
+		super(arguments)
+	}
+} 
+
+2.   Raise that exception whenever it needed. 
+		throw  new <ExceptionClassName>(arg value);
+
+3.   Handle that exception in catch block. 

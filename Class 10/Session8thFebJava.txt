@@ -1,0 +1,93 @@
+Today's Agenda
+---------------
+I/O Streams
+--------
+Multi Threading
+--------------------------------
+I/O Streams
+
+Input Output Streams:- 
+
+What is meant by a stream:- 
+
+It is a collection/sequence of bits and bytes flowing from one medium to another medium is called a Stream. 
+
+Java provides some standard i/o streams
+
+1.  Input Stream  :-  System.in (Standard Input Stream)
+					It represents always Keyboard.
+2.  Output Stream :-  System.out (Standard Output Stream)
+				It represents  always Moniter
+3.  Error Stream  :-  System.err (Standard Error Stream)
+				It represents always to print Error into
+					System.err.println(); 
+
+The Streams are classified into Two Types :- 
+
+InputStream :- 
+	It is an abstract class which has set of child classes to perform some input stream 			operations and it has set of methods also. 
+	
+	read() :- It allows to read a character from Input Stream(Keyboard/File/....) and returns it's
+			Ascii Value, when it reaches to end of Input Stream then it returns -1 val.
+	close() :-  It allows to close input stream once it's task has been done.
+
+OutputSteam :-
+	It is also an abstract class which has set of child classes to perform some output stream 	operations and it has set of methods also. 
+
+	write(int) :-  It allows to write a character on output stream(moniter/file/....), here it 	takes value in the form of ascill value but it returns actual character.
+	write(byte[]) :-  It allows to write set of character which is in the form of bits and bytes
+	it is return it's character format. 
+	close() :-   it allows to close the output stream once it's task has been done. 
+
+Note :-  these all classes and methods raise checked exceptions. 
+			IOException
+			FileNotFoundExcetion
+------------------------------------
+File Input/Output Operations :- 
+
+here it allows to perform some operations on files. i.e. writing data into a file / reading data from file, copying data from one file to another file etc.
+
+FileOutputStream :- this class allows to write some textual data in a specified file. 
+				FileOutputStream  <obj> = new FileOutputStream("file name"); 
+
+FileInputStream:-  this  class allows to read data from file. 
+		FileInputStream  <obj> = new FileInputStream("file name");
+------------------------------
+FileWriter :-  It is also meant for writing data into a file directly in the form of characters.
+			It is a facility like if already exist then add the content.
+
+		FileWriter  <object> = new FileWriter("filename", true/false)
+
+		true :-  append data
+		false :-  not append data.
+FileReader  :-  It is used to open file to read data.
+BufferedReader :-  this class is used to read data from specified input stream with the help of a method called readLine().
+here readLine() reaches to end of file, it returns null.
+
+
+FileReader  <object>  = new FileReader(filename);
+
+BufferedReader <object> = new BufferedReader(FileReaderClassObj);
+------------------
+
+File :-  it allows to perform different operations disk of the system. 
+		operations like 
+			Creating New Empty File
+			Creating Folder
+			Checking file/folder existancy
+			Delete a file/folder
+			Checking a name weather it is file / folder name. 
+			Showing list of files and folders
+
+File  <obj> = new File("Filename/Foldername/Location");
+
+Methods of File Class:- 
+
+createNewFile() :-  it creates empty file.
+mkdir() :-  it allows to create a folder.
+exists() :-  it allows to check file / folder existancy. 
+delete() :-  it allows to delete a file. 
+isFile() :-  it allows to check given name is file or not. 
+isDirectory() :-  it allows to check given name is folder or not. 
+list() :-  it allows display all files or folders from specified location and returns in array format.
+

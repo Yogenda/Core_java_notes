@@ -1,0 +1,82 @@
+Today's Agenda
+-----------------
+Collection Framework
+	List
+	Set
+	Map
+------------------
+				-:Data Structure:-
+
+Data :-  Collection of Raw Material/Colletion of Inputs 
+
+Structure :- Managing that data in structural format in memory effectivly. 
+
+The Operations of the data in an Application:-
+--------------------
+1.  Adding New Data
+2.  Traversting Data(Retrival)
+3.  Searching Data
+4.  Updating Data
+5.  Deleting Data
+6.  Sorting Data
+------------------------------
+DS will give as some concepts
+
+1.  Arrays
+2.  Stack
+3.  Queue
+4.  Linked List
+5.  Tree
+6.  Graph
+--------------------------------
+Collection Framework :-  
+
+Collection  :-  it represents a single unit of objects. i.e. a group of objects storing in one unit.
+
+Framework :-  It is a readymade architecture which consist set of classes and interfaces.
+
+Collection Framework :-
+It is a unified architecture for storing and manipulating group of objects. 
+
+	It provides 
+			Interfaces and it's implemented classes
+			Alogrithms(formulas)
+
+Purpose :-  
+1. It has a high - performance, the implementations of the framework is working with dynamic arrays, linked lists, trees and so on....
+2. Collection framework has to allow  different types of collections to work in a similar manner and with high performance and interoperability.
+
+
+It has collection of predefined interfaces and it's implemented classes. these all comes from a package called java.util
+----------------
+Collection Interface :- 
+It is a parent interface for other interfaces like List, Set, Queue.
+It has set of methods which will be used in all the child interfaces and their related classes. 
+
+add(object) :-  it is meant for adding an object/value to the collection(list, set, queue).
+
+contains(obj) :-  it check an object / value exist or not in a collection. 
+
+equals(obj) :-  to compare two objects are equal or not. 
+
+remove(obj) :-  it allows to delete an object from collection. 
+
+removeAll() :-  delete all the objects from collection. 
+-------------------------------------------------
+List Interface :-  It is a child interface of Collection Interfaace, It allows to store collection values / objects in following way:
+
+		1.  List maintains Ordered Formated Data. 
+		2.  List maintains duplicating of data.
+		3.  It has following implemented Classes
+				ArrayList, LinkedList, Vector, Stack
+
+
+ArrayList	:-  it uses a dynamic array to store values in memory.
+				List<Data Type>  <object> = new ArrayList<Data Type>();
+
+LinkedList	:-  It uses a doubly linked list to store values in memory.
+
+
+----------------------------
+Iterator Interface :-  
+

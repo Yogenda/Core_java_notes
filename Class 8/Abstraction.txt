@@ -1,0 +1,194 @@
+Today's Agenda
+----------------
+Abstract Classes
+Interfaces
+Polymarphisum
+----------------
+Abstract class:-
+
+A class which is declared with the abstract keyword is known as an abstract class in Java. It can have abstract and non-abstract methods (method with the body).
+
+Data Abstraction:-
+Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+
+Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type the text and send the message. You don't know the internal processing about the message delivery.
+
+Ways to achieve Abstraction
+There are two ways to achieve abstraction in java
+
+1. Abstract class (0 to 100%)
+2. Interface (100%)
+
+Abstract class
+A class which is declared as abstract is known as an abstract class. It can have abstract and non-abstract methods. It needs to be extended and its method implemented. It cannot be instantiated.
+
+abstract class demo
+{
+	abstract methods (only declaration of the method)
+	non-abstract methods (method having defintion-concrete methods)
+}
+
+Points to Remember
+1. An abstract class must be declared with an abstract keyword.
+2. It can have abstract and non-abstract methods.
+3. It cannot be instantiated.
+4. It can have constructors and static methods also.
+
+Note :- Every Abstract class is a parent class in inheritance. 
+
+
+Abstract Method
+A method which is declared as abstract and does not have implementation is known as an abstract method.
+
+One Abstract method can have multiple actions in their child classes. 
+
+Example
+
+abstract void printStatus();//no method body and abstract  
+
+Example of Abstract class that has an abstract method
+
+In this example, Bike is an abstract class that contains only one abstract method run. Its implementation is provided by the Honda class.
+
+abstract class Bike{  
+  abstract void run();  
+}
+  
+class Honda4 extends Bike
+{  
+void run()
+{
+System.out.println("running safely");
+}  
+public static void main(String args[])
+{  
+ Bike obj = new Honda4();  
+ obj.run();  
+}  
+}  
+
+Understanding the real scenario of Abstract class
+Shape is the abstract class, and its implementation is provided by the Rectangle and Circle classes.
+
+Mostly, we don't know about the implementation class (which is hidden to the end user), and an object of the implementation class is provided by the factory method.
+
+
+---------------------------
+Interface :- It is a one type of class where it allows only declarations of methods and variables. 
+It is also called as pure abstract class. 
+
+Purpose :- 
+
+1.  To achieve  Fully Abstraction
+2.  To achieve  multiple inheritance
+3.  Loosly Coupling
+
+interface <iface name>
+{
+	method clarations
+	variable declarations
+}
+
+Note :-  
+
+1.  It cannot be instantiated(object cannot be created). 
+2.  By using "implements" keyword, we have to inherit interface to the class. 
+3.  A class can inherit any no of interfaces. 
+4.  Declared methods in interface will have defintions on child class. 
+
+class <classname> implements <iface1, iface2, .....>
+{
+	...........
+}
+
+Some Points :- 
+
+1.  An inheritance will taken b/w interfaces. 
+interface iface1
+{
+....
+}
+
+interface iface2  extends iface1
+{
+.......
+}
+
+2.  A child class can inherit one parent class and multiple interfaces, but here first class then interfaces has to be inherited. 
+
+class parent
+{
+	...
+}
+
+interface iface1
+{
+}
+
+interface iface2
+{
+}
+
+class child extends parent implements iface1, iface2
+{
+
+}
+-----------------------------------
+Polymarphisum :-
+
+Poly = Many
+Marphisum = Forms
+
+The process of implementing multiple actions on single unit. 
+
+Overloading :- Add on features of the existing unit/item without changing it's default action. 
+			It can be achieved with help of Method Overloading. 
+
+Method Overloading :-  the process of grouping similar kind of different actions under one unit. 
+			In this case  MethodName is same has to show variations in arguments.
+Rules :- 
+	1.   Every method body should have different no of parameters.
+			void Sample()
+			void Sample(int x)
+			void Sample(int x, float y)
+	2.   If no of parameters are same, then change the data type of the parameters.
+			void Sample(float x)
+			void Sample(int x, int y)
+
+	it is also called as compile time polymarphisum.
+		 
+------------------------------
+Overriding:- Replacemet features of the existing unit/item by changing it's default action. 
+		It can be achieved with Method Overriding. 
+
+Method Overriding :- it is implemented whenever both parent and child classes are having same content.
+			i.e. same methodnames including parameters.
+
+Rules 
+		1. Class must be under inheritance. 
+		2. Parent and Child Classes are should same content(methodnames including parameters)
+		3. Create an object for Parent class then call the methods.
+		4. Create an object for Child class then assign that object to the parent class object
+				ParentClassObj = ChildClassObj
+		5. Now call methods with parent class object, that calling will be done from child 			class.
+class abc
+{
+	void get()
+	{
+		Action-1
+	}
+}
+
+class bca extends abc
+{
+	void get()
+	{
+		Action-2
+	}
+}
+
+void main()
+{
+	bca b = new bca();
+	b.get();
+}

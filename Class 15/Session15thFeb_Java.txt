@@ -1,0 +1,106 @@
+Today's Agenda:- 
+-----------------
+1. Synchronization
+2. Data Structures
+	Stack
+	Queue
+	Sorting Methods
+-----------------
+Thread Synchronization :-
+It is the capability to control the access of multiple threads to any shared resource. 
+
+Purpose :-  
+1. It helps to prevent thread interference. 
+2. It helps to prevent concurrency problem.
+
+It can be implemented into 3 ways 
+
+1.  Synchronized method(method level)
+2.  Synchronized  block(block level)
+3.  Static Synchronization
+
+Concept of Lock :-  
+This mechanisum  developed by using with "synchronized"  is meant for lock concept. 
+It has to be implemented with method/block/static levels. Here once thread execution is started, then it won't allows to execute another thread until present thread execution is completed. 
+
+Method Level :- 
+
+This type of mechanisum is applied on a method while creating shared resource.
+
+synchronized  <return type> MethodName([arguments])
+{
+............
+}   
+
+Block Level Synchronization :-  This type of mechanisum is applied on particular peace of code in a method. Here method is not sync, within the method  some part of code involving in sync other part of code not involving sync. 
+
+Suppose if a method having 100 lines of code, if it is sync'zed  it takes lot of time execute all the threads. 
+
+<return type> MethodName([arguments])
+{
+................
+................
+	synchronized(this)
+	{
+		code for sync
+	}
+-------------
+-------------
+}
+
+Static Level Synchronization:-  This type of mechanisum is applied on a static method of the shared resoruce class. Here lock concept will be applied on a class itself, not on the instance(thread).
+Whenever sync want's apply on entire class, then use static level sync. 
+
+synchronized static <return type> MethodName([arguments])
+{
+............
+}  
+------------------------------------------------
+Data  Strctures :- 
+It can be defined as the group of data elements which provides an efficient way of storing and organising data in the computer memory so that it can be used efficiently.
+
+There are two types of data strucutures 
+
+1. Linear
+	Arrays, Stack, Queue, Linked List
+2. Non-Linear
+	Trees, Graphs
+---------------------------
+Operations:- 
+
+1. Traversing
+2. Insertion
+3. Deletion
+4. Searching
+5. Sorting
+----------------------------------------
+Stack :- It is one of the Linear DS to store colletion of objects/elements. 
+	it follows a rule  called as "Last-In-First-Out".
+
+Points to remembers:- 
+	if stack is returning 
+			-1  =it is empty
+			0  = it has only one element
+			n-1  =  it has full of values
+As per java, stack will be discussed with Collections.
+
+Stack is a predefined class and it has following methods. 
+
+push() :-  to add an element to the stack
+pop() :-  to remove an element from the stack
+isEmpty() :- it is used check stack is empty or not
+isFull()  :-  to check full or not
+peek() :- which returns last element from the stack without removing.
+-----------------------------------------------------------------------
+Queue :-  it is also one of the Linear DS to store collection of objects/elements. 
+			it follows a rules called as "First-In-First-Out".
+
+Operations :- 
+
+Enqueue(add()) :-  to add elements to the queue
+Dequeue(poll()) :-  to delete elements from the queue
+isEmpty :- to check empty or not
+isFull  :-  to check full or not
+peek :-  it return a first value without removing value. 
+
+As per the collection there is an interface "Queue", and it has set of implemented classes. 

@@ -1,0 +1,235 @@
+Q. What is the purpose of learning any programming lang?
+
+A. To Develop Softwares/Applications. 
+------------------------------
+Today's Agenda:-
+
+1. Different Types of Applications
+2. Introduction Java
+3. Tokens of  Java
+	Variables
+	Constants
+	Keyword
+	Operators
+------------------------------------
+1. Different types of applications
+
+A. Desktop Applications
+		these applications are used in local system only. 
+			Ex:-  Notepad, Office Tools, ...
+				Billing Software
+B. Network Applications
+		these applications are used in client / server environment.
+			these are mainly used in Org. where data has to be referred / shared with 			multiple people(emp & customers)
+				Ex:-  Banking Software
+					LIC Software
+C. Web Applications
+		these applications are used in internet. 
+			Ex:- All Websites(Web Applications)
+D. Mobile Applications
+		these applications  are used in Mobile. 
+			Ex:-  All Mobile Apps.
+E. Device Applications
+		these applications are used for activating electronic devices. 
+			Ex:-  Device Drivers.
+
+to develop these all types of applications,  Java, Dotnet, ...... are useful.
+----------------------------------------------------
+What is a Java? 
+It is a general purpose  and pure object oriented programming lang used to develop different type of applications. 
+
+there are 3 Sections of Java
+
+Core Java -  J2SE - Java 2 Standard Edition
+				All the language funda's.
+Adv. Java  - J2EE - Java 2 Enterprise Edition
+				It is meant for developing enterprise applications.
+	     J2ME - Java 2 Micro Edition
+				it is meant for developing mobile applications and device based application. 
+
+We have different type of versions of java.   Running Versions are Java8/Java9
+						Latest Version : Java 17
+
+	All Java updations/Software can be downloaded from "Oracle.com"
+----------------------------------------------------------
+
+For Learning Any Programming Lang:- 
+
+Tokens 
+		Variables, Constants, Keywords, Operators
+
+Variable :- It is a named memory location to store values temply. 
+			these are having a facility to modify values whenever required. 
+			Rules for Naming:- 
+			1.  Name must be one word. 
+			2.  it should starts with either alphabet / _(underscore). 
+			3.  Name may have alphanumeric.
+
+Constants:-  These are one type of variables which will not allow to modify it's value once it is assigned.
+
+Keywords :-  These are the reserved words of the programming lang, which is having specific action. 
+		Java having nearly 50+ keywords.
+			char, byte, int, long, short, double, float, if, else, do, while, for, extends, .....
+
+Data Types :- 
+
+Classification of Data is called data type. 
+
+As per the prog. lang
+
+there are two types of data types. 
+		1. Primitive Data types :- providing by the programming lang
+			These are again divided into three types
+				Number Based  :-  All the numbers can be grouped  but divided into 
+						  two parts
+							Integer :-  All Whole numbers
+								Keywords :-  byte, short, int, long
+							Decimal :-  Numbers having decimal portion
+								Keywords:- float,  double
+
+				Text Based  :-  All characters is called as  text/string.
+						these are again two types
+						Character :- 
+						either single alphabet/single digit/single symbol
+						character value should enclose in single quotes('  ')
+							Keyword : char
+						String :- Collection of Characters 
+							values are enclosed within double quotes("  ")
+				Boolean :-  it allows only two values true/false
+							keyword :-  boolean
+------------------------------------------------------------------------------------------------------
+		2. User Defined Data types (Non -Primitive) :-  these are created and used by the developer.
+					keywords :-  class, Enum, String...
+-----------------------------------------------------------------------------------------------------		
+How to Create a Variable? 
+		<Data Type>  <variablename>[= <value>]	
+				< .. >  = must be used
+				[ .. ]  = optional (may or may not)
+
+		int x = 100;
+			for every variable, following properties are existed
+				1. Name
+				2. Value
+				3. Address
+				4. Capacity(min val - max val)
+				5. Size of Memory
+
+	Ex:-  int x = 100;
+	      float y = 12.45;
+	      char ch ='A';
+
+How to Create a constant variable ?
+		final <data type> <variablename> = <value>;
+			
+		Ex:-
+		final float pi=3.14;
+-------------------------------------------------------------------------------------
+Operators :- these are the symbols which has some action b/w operands.
+
+Arithmetic Operators :-  these are used to perform mathematical calculations. 
+				+(add), -(minus), *(multuply), /(division), %(div - remainder)
+
+int x=10;
+int y=3;
+
+x+y = 13
+x-y = 7
+x*y = 30
+x/y = 3
+x%y = 1
+
+Relational Operators :- these are used to check conditions. 
+				>, <, >=, <=, !=(not equals), ==(equals)
+
+int x=10;
+int y=3;
+
+x>y =  true
+x<y =  false
+x>=y = true
+y<=x = true
+x!=y = true
+x==y = false
+
+Logical Operators :-  these are used b/w conditions when multiple conditions are checking. 
+				&& (AND)  ==  All conditions must be true
+				|| (OR)  == Any one condition must be true
+				!  (NOT)  == if condition true it returns false and vice versa
+AND Truth Table
+
+T x T = T
+T x F = F
+F x T = F
+F x F = F
+
+OR Truth Table
+
+T x T = T
+T x F = T
+F x T = T
+F x F = F
+
+NOT Truth Table 
+
+T = F
+F = T
+
+Assignment Operators :-  these are used to assign value to the variables /  results of expressions are also assigned variables. 
+
+= (Assgining value)  +=, -=, /=, *=, %=
+
+int x = 10;
+int y = 20;
+
+x = y; // x and y are value 20
+y = x; // x and y are value 10
+
+int z = x+y; // z value is 30
+
+x = x+10;  // mathematical equation
+x+=10;     // prog equation
+
+x = x-5; (or) x-=5;
+x = x+y;  (or) x+=y;
+
+Unary Operators :-  these are used to increment / decrement by value 1. 
+			++ increment by 1
+			-- decrement by 1
+int x = 10;
+
+x = x+1;  (or)  x++;  // both results are same (x value 11)
+x = x-1;  (or)  x--;  // both results are same (x value 9)
+
+these are again classified into two types
+	
+	pre increment/decrement 	:  if operator is left side of the variable then it is pre.
+						++x
+						--x
+			First Assginment then Action
+				int x = 10;
+				int y = ++x;  // y = 10, x = 11
+
+	post increment/decrement	:  if operator is right side of the variable then it is post.
+						x++
+						x--
+			First Action then Assignment
+				int x = 10;
+				int y = x++;  // y = 11, x = 11
+
+Conditional Operators :-  these are used to check conditions.
+				? :  (<condition>?<true>:<false>)
+
+Bitwise Operators :-  these are used while performing any operations on binary values
+				<< = left shift 
+				>> = right shift
+				& = single ampercent
+				| = single pipe 
+Concatenation Operators :-  these are used to concatenate any two strings or string with other values
+				+  = for concatenating two strings / string with any other type val.
+--------------------------------------------------
+Tomorrow's Agenda:-
+
+1. Software Installations 
+2. Structure of Java
+3. First program and continuing examples
+--------------------------------

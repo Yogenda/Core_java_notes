@@ -1,0 +1,109 @@
+Today's Agenda:-
+------------------
+Collection Part-2
+	Differences b/w List Implemented Classes
+	Set
+	Map
+Sorting methods using Objects. 
+------------------------------
+List :-  It is one of the collection interface which holds set of values/objects.
+		1.  It allows duplicate values / Objects
+		2.  While retriving(traversing), it maintains ordered collection. 
+		3.  It has 4 implemented classes
+			ArrayList, LinkedList, Vector, Stack
+
+ArrayList :-  It is a class which allows to store values with dynamic array process. 
+				it is one type of array where it allows to store unlimited data. 
+				it is a non-syncrynization(Parellel Processing)
+		List<data type>  <object>  = new ArrayList<data type>();
+
+LinkedList :-  here class arranges values in the form of doubly LinkedList data structure. 
+			i.e. collection of nodes are interlinked with data and it's related address.
+			it is also a non-syncrynization
+Vector :- it is as same as ArrayList but it is synchroized. so that parelel process is not applicable.
+------------------------------
+Set :-  It is one of the collection which has been derived from Collection Interface. 
+
+1.  It will not allow duplicate values.
+2.  It represents the unodered set of elements. (while traversing the elements will accessed randomly)
+3.  it has 3 implemented classes
+		HashSet
+		LinkedHashSet
+		TreeSet
+
+HashSet :-  this class implements all the features of the set interface. 
+			Set<Data Type>  <object> = new HashSet<Data Type>();
+LinkedHashSet :-  It is as same as HashSet but values are accessed in ordered format. 
+			Set<Data Type>  <object> = new LinkedHashSet<Data Type>();
+TreeSet :-  It is also as same as HashSet but values are accessed by default in sorted(asending) 		order.
+			Set<Data Type>  <object> = new TreeSet<Data Type>();
+
+Note:-  HashSet, LinkedHashSet allows one null value whereas TreeSet will not allow null values.
+------------------------------------------------------------------------
+Map :- It is one of the collection but it is not a part of Collection Interface. 
+		Map is also an interface. 
+it holds set of key-value pairs in one object. 
+
+1.   implemented classes are HashMap, TreeMap, LinkedHasMap
+	Map<key data type, value data type>  Object  = new HashMap<keydata type, value data type>();
+2.  Keys should  not be a duplicates, once key is defined that cannot be modified.
+3.  HashMap will print key-value pairs randomly based on key. 
+4.  LinkedHashMap will print key-value pairs ordered format of key. 
+5.  TreeMap  will print key-value pairs in sorted order based on key. 
+
+Map Methods :- 
+
+put(key, value) :-  it allows to add key-value pair into map collection. 
+get(key) :-  it allows to print value based on key. 
+isEmpty() :-  it allows to check map colection is empty or not. 
+size() :- it allows to count  no of keys are present in collection. 
+containsKey(key) :- it allows to search a key in map collection.
+containsValue(val) :- it allows to search a value in map collection.
+keySet() :-  it allows to get all the keys from the map colletion and returns as a set collection.
+remove(key) :-  it allows to remove a key from collection. it also delete's it's relavent value. 
+
+Entry<key, value>  :-  it allows to return key and value from  map collection. it has to be used in for loop only. 
+entrySet() :-  it allows to get a key-value pair. 
+here to print only key :-  getKey()
+here to print only value :-  getValue()
+
+replace(key, new value):-  it allows to change value based on key.
+---------------------
+Sorting using Collection:- 
+
+To work with sorting for class objects there are two Interfaces
+
+Comparable and Comparator
+
+Comparable :-  this interface will be compares one object with other object of the same class based on particular key(variable). 
+
+here internally  CompareTo() method will work. 
+
+1. Comparable Interface has to implement to the class where variable/ data exist.
+
+class Student  implements Comparable<Student>
+{
+	// getters and setters
+	// constructors
+@Override
+	public int compareTo(Student s1) 
+	{
+		return Integer.compare(getRollno(), s1.getRollno());
+	}
+	
+}
+
+Comparator :- It is also an interface which is as same as Comparable but it allows multiple field sortings where comparable not allows. 
+
+for this kind of interface, 
+
+we have to create separate classes for every sorting without distrubing POJO class.
+
+class  SortingBasedOnRollNumber implements Comparator<Student>
+{
+		public int compare(Student s1, Student s2)
+		{
+
+		return Integer.compare(s1.getRollno(), s2.getRollno());
+		}
+}

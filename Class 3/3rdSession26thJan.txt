@@ -1,0 +1,148 @@
+Today's Agenda
+--------------
+Control Statements 
+	If statement
+	Switch Statement
+	Looping Statement
+Arrays
+----------------------------------------------
+Control Statements :- 
+these statements are used to control flow of progrm execution. 
+	1. Conditional
+	2. Branching
+	3. Looping
+
+1. Conditional :-  
+These are used to check conditions based on condition true/false some statements will be executed.
+"if" statement is used to check condition. 
+
+Simple If :- 
+------------
+if(condition)
+{
+	set of statements
+}
+
+If - Else :- 
+------------
+if(condition)
+{
+	set of true statements
+}
+else
+{
+	set of false statements
+}
+
+Else - IF :- 
+------------
+if(cond-1)
+{
+	set of stats;
+} 
+else if(cond-2)
+{
+	set of stmts
+}
+................
+................
+[else 
+{
+	set of default stmts
+}]
+
+Nested If :-
+--------
+A if condition within the another if condition. 
+
+if(cond-1)
+{
+	if(cond-2)
+	{
+		...........
+	}
+}
+
+Branching Statements :- 
+-------------------------
+This is usesd to check multiple conditions on single variable weather value is equal or  not. 
+
+switch(variable)
+{
+	case  <Val-1>:
+		set of stmts
+		break;
+	case <Val-2>:
+		set of stmts
+		break;
+	......
+	......
+	default:
+		set of stmts
+		break;
+}
+--------------------------------------------
+Loops :-  the process of repeating a task for n number of times. 
+
+there are 4 loops
+
+1. while loop
+2. do - while
+3. for loop
+4. foreach 
+
+while loop :- this loop repeat's it's task until the given condition is true. 
+
+variable initial value
+while(condition)
+{
+	set of statements
+	increment / decrement operations
+}
+
+Note :-  for  any loop need a separate variable(initial value, condition, termination). 
+
+
+int  x = 1;
+while(x<=5)
+{
+	print("Hello World");
+	x=x+1;
+}
+
+int x = 5;
+while(x>=1)
+{
+	print("hello world");
+	x = x-1;
+}
+
+For loop :- it is as same as while loop but initilization, condition and iteration comes in a line. 
+
+for(initilization;condition;iteration)
+{
+	set of statements
+}
+
+do - while loop:-  it is also as same as while loop but condition will be checked at the end of loop.
+
+
+variable initial value
+do
+{
+	set of statements
+	increment / decrement operations
+}
+while(condition);
+
+Note :-  if condition is false for the first time, while loop rotate task 0 times whereas do-while rotates one time. 
+---------------------------
+1.  Accept Month Number then print no of days in that month. 
+		solve this example using switch and if
+2.  Accept a number then check that number is prime or not(solve using while and for loop)
+3.  Accept a number then check given number is palindrome or not.(solve using while and for loop)
+4.  Accept a number then print that number digits in word format. 
+	123 = One Two Three
+5.  Accept a number then find sum of indivisual digits then check that sum is even or odd. 
+123 =  1+2+3 = 6  = Even Number
+23  = 2+3 = 5 = ODd Number

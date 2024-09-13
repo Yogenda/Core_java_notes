@@ -1,0 +1,105 @@
+Today's Agenda:- 
+---------------
+	Getters and Setters
+	Inheritance
+		types of inheritances
+	Polymarphisum
+---------------
+Getters and Setters :- 
+		These are the special methods to access a class private variables outside the class. 
+		
+		Setter Methods are used to assign value to the variable and if required we can also do 		it for validation for that input.
+
+		void setVariableName(argument)
+		{
+			this.instance variable = argument variable
+		}
+
+		Getter Methods are used to return value from the variable. 
+		
+		<return type>  getVariableName()
+		{
+			return <variable>;
+		}
+
+For Naming Convention:- 
+
+		String sname;
+
+		void setSname(String sname)
+		{
+			this.sname = sname;
+		}
+
+		String  getSname()
+		{
+			return sname;
+		}
+-------------------------------------------------------
+Inheritance :- It is the process of getting features from existing item to new item. 
+
+Purpose :-  reusability of the classes. 
+
+As per inheritance, 
+
+Exiting Item is called as Parent/Base/Super classes
+New Item is called as Child/Derived/Sub classes. 
+
+Parent - Child
+BAse - Derived
+Super - Sub
+
+Inheritance always will be done from parent to child classes. 
+
+class <child class>  extends <parent class>
+{
+	.....
+	body of the progaram
+}
+
+1. As per inheritance no need to create any object for parent classes, just create an object for child classes then call parent class methods and child class methods with child class object.
+ 
+2. To activate parent class data into child class, "protected"  access specifier has to be used while delcaring variables in parent class. 
+
+Types of Inheritance :- 
+
+1. Single
+2. Multi Level
+3. Multiple
+4. Hirarchical
+5. Hybrid
+
+Example :- 
+
+class Biodata
+{
+
+}
+
+class Marks
+{
+
+}
+
+class Attendance 
+{
+
+}
+
+class ProgressReport
+{
+	need to get Biodata, Marks and Attendance classes data.
+}
+
+class MarkSheet
+{
+need to get Biodata, Marks classes data.
+}
+
+Constructors in Inheritance:-
+---------------------------------------
+1.  A Parent class constructor will be executed with the help of child class object.
+2.  Both parent and child class constructors are executed with the help of child class object if those constructors are not having any arguments. 
+3.  if both parent and child constructors are having parameters, then call the parent class constructor in child class constructor by using "super()".
+
+super() :-  it will call parent class constructor into child class constructor when those cons are having arguments.  

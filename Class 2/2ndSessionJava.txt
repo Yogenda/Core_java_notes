@@ -1,0 +1,141 @@
+Today's Agenda:-
+----------------
+1. Software Installations 
+2. Structure of Java
+3. First program and continuing examples
+-----------------------------------------
+Software Installations :- 
+
+1.  Goto oracle.com, download  specific version of JDK(Java Development Kit)
+			JDK 8 / 9 / any latest version
+2.  To download jdk, first we should have account in oracle.com
+3.  Install jdk by double clicking on exe file downloaded.
+4.  Now download Eclipse Software and configure it. 
+------------------------------------------
+Structure of Java:-
+
+importing packages
+
+class <classname>
+{
+	public static void main(String[] args)
+	{
+		body of the program
+	}
+
+	....................
+}
+
+----------------------------------
+Generally Every Programming Lang is a function based programming lang.
+i.e. to solve a task there is a function in a lang. 
+
+Function is a predefined word which has specific action.  Every function having set of predefined instructions to perform a task. these instructions will be written in a special files called as Library files. 
+
+As per 'C and CPP'  library files are called as Header Files. 
+
+#include <stdio.h>
+-----------------------------------
+1. packages :- these are library files of the java. 
+usually a package is called as set of classes. A class consist set of functions. 
+
+import "PackageName"
+
+import java.io.*;	// * represent all classes.
+import java.io.Console; // importing specific class.
+
+java.sql, java.lang, java.util, .....
+
+2. Every java program starts with "class"  and identified by a class name. 
+
+3. main() :- the program execution starts with main() method. 
+
+4. void :- it specifies that main() is not returning any value. 
+
+5. static :- while calling a method to avoid object, then method starts with static. 
+
+6. public :-  to access class members outside the class, we use public.
+
+7. String[] args :-  which explains in a concept of "Command Line Arguments".
+
+Once method/function is created, to get output of that function we have to call that function in other functions.
+main() method will be called by the compiler. 
+
+----------------
+Ouptut Statement :-  
+System.out.println() :-  it is used to print statements / variable values line by line. 
+System.out.print() :-  it is used to print statements / variable values side by side. 
+---------------
+
+class  Demo
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Hello World");
+	}
+}
+
+
+Once JDK is installed, it will install other two software's, 
+JVM :- Java Virtual Machine :-  
+		it is an execution engine for java, it will take care entire program execution
+		JVM basically consist of different operating systems to provide enviornment. 
+
+JRE :- Java Runtime Environment
+	it will provide run time environment for java program based on type of application.
+		i.e. providing library for the program.
+
+we are having different Operating Systems. 
+
+Windows
+Unix
+Linux
+Mac OS
+
+A prog lang:- C/CPP
+
+
+IS JVM alone sufficient for execution of java
+	Provide run time enviornment
+	verifies the code
+	loads code
+	executes code
+Is JRE alone enough for compilation 
+	JRE =Library of classes + JVM
+--------------------------------------------
+
+Type Casting (or) Type Conversion :- 
+------------------------------------
+the process of converting values from one data type to another data type. 
+
+there are two types of type castings
+
+1. Implicit
+		here conversion process will be taken from lowest data type to highest data type.
+		double->long->float->int->short->byte 
+		here no need to additional statements to convert values
+2. Explicit
+	here conversion process will be taken from highest data type to lowest data type. 
+		here we have to write additional statements to convert values. 
+
+------------------------------------------------
+How to input into a variable dynamically :- 
+
+Scanner Class :-  this class is used to input values into variable dynamically(at the time of program execution).
+
+1. Import java.util.Scanner  package at the top of the program
+2. Create an object for the Scanner class as follows within the main()
+		Scanner <object> = new Scanner(System.in);
+						System.in => represents keyboard.
+3. Now use following methods to read values into different data type variables.
+		byte 	=  nextByte()
+		short   =  nextShort()
+		int     =  nextInt()
+		long    =  nextLong()
+		float   =  nextFloat()
+		double  =  nextDouble()
+		char    =  nextCharacter()
+		String  =  next()/nextLine()
+to use these methods, follow below given syntax
+		variable = object.methodname()
+---------------------------------------

@@ -1,0 +1,105 @@
+Today's Agenda
+---------------
+Multi Threading
+Syncrinization
+---------------
+Multi Threadig: 
+---------------
+What is a Thread?
+
+Thread is a process/task. 
+
+Multi Threading is a process of executing  multiple tasks at a time. 
+
+Till now the programming is done comes under Single Threaded Programming. 
+
+Purpose of the Multi Threading is to execute multiple independent tasks at a time. 
+
+To work with Multi Threading :-
+-------------------
+There are two ways 
+	1. Using Thread Class
+	2. Using Runnable Interface
+
+Thread Class :-  It is an abstract class which has some methods as follows.
+		
+		run() :-  it is an abstract method, by using this method only, we have to define task.
+		start() :-  it is used to start thread execution process.
+		sleep() :-  it is used to suspend thread process for a particular period of time. 
+
+Runnable Interface :-  it is an interface which has only one abstract method by name run().
+
+Using Thread Class:- 
+--------------------
+a.  Create a class and extend Thread class
+b.  Define run() method with a task which want's execute in threading. 
+c.  Create an object for the class, then use start() method  to execute thread.
+
+Using Runnable Interface:-
+--------------------------
+a.  Create a class and implements Runnable interface
+b.  Define run() method with a task which want's execute in threading.
+c.  Create an object for user-defined Class.
+d.  Create an object for Thread Class, while creating an object, pass user-defined class object as 	constructor parameter.
+e. Now execute thread with Thread class Object by using start method.
+---------------------------------------------
+Life Cycle of the Thread :-
+
+There are 5 stages of the Thread Life Cycle
+
+a. New Born State
+	It is a state where just creating an object for thread class.
+b. Runnable State
+	It is a state where all the threads making availability for the process to the processor, it 	will be done by	start() method.
+c. Running State
+	It is a state where a thread being executed  by the processor, i.e. calling of the run() 	method. 
+d. Blocked State :-  It is a state where thread being suspended for a finite period of time / until 			user resumes the thread execution. 
+				sleep(), suspend(), ...
+e. Dead State:-  It is a state where thread will be deleted once run() method process is completed. 
+-------------------------------------
+Naming Thread :- As per the Threading concept, Everey thread created by us, processor will give a name. Those  name's like  Thread-0, Thread-1, Thread-2, ..... And it will provide changing a name for that thread also.
+
+getName() :-  it is meant for showing thread name.
+setName(string) :- it is meant for changing the thread name.
+
+Priority Thread :-  It is the process of which thread should execute first.
+Usually threads are executed randomly based on processor priority. But here Thread Priorities will give a facility for making thread executions in an order. But it is not guaranteed, because it is depends on JVM. 
+
+Priorites are represented by a number between 1 and 10. Thread priorties will be taken care by the thread schedular. 
+
+getPriority() :-  it shows present priority of the thread. 
+setPriority(integer) :-  it allows to set priority of the thread. 
+
+there are 3 priority constants exists
+
+MIN_PRIORITY  =  1
+MAX_PRIORITY  =  10
+NORM_PRIORITY =  5
+
+the thread which is having MAX prority, that will execute first. 
+----------------------------------------
+Thread Synchronization :-
+It is the capability to control the access of multiple threads to any shared resource. 
+
+Purpose :-  
+1. It helps to prevent thread interference. 
+2. It helps to prevent concurrency problem.
+
+It can be implemented into 3 ways 
+
+1.  Synchronized method(method level)
+2.  Synchronized  block(bock level)
+3.  Static Synchronization
+
+Concept of Lock :-  
+This mechanisum  developed by using with "synchronized"  is meant for lock concept. 
+It has to be implemented with method/block/static levels. 
+
+Method Level :- 
+
+This type of mechanisum is applied on a method while creating shared resource.
+
+synchronized  <return type> MethodName([arguments])
+{
+............
+}   

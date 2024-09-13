@@ -1,0 +1,114 @@
+Today's Agenda
+---------------
+Strings
+User Defined Methods
+----------------
+Intro to OOPS
+-------------------------------------------
+String :- It is a collection of characters/Array of characters. 
+
+1.  String values should enclose within the double quotes. 
+2.  To declare string variable, "String" class is used. 
+3.  String  class is a immutable class. The value assigned in string variable cannot be modified. 
+4.  Character nothing but, an alphabet/a digit/a symbol. 
+5.  String value ends with null(\0) value.
+
+String <Variable>  = "Value";
+
+String str = "Java";
+
+String adrs = "Door No: 12/234-A";
+
+
+String Functions :- 
+-------------------
+toUpperCase()  :-  converts a string into Upper Case Letters
+toLowerCase()  :-  concerts a string into LOwer Case Leteters
+length() :-  to count no of chars into a string. 
+charAt(index) :-  it will print a character from string based on index number.
+equals() :- it check given two strings are equal or not. 
+equalsIgnoreCase() :-  it is as same as equals() but it ignores Case Sensitive. 
+compareTo() :- it allows to ccompare two string to find which big / which small / equals. 
+			if first string bigger than the second string then it returns >0
+			if first string smaller than the second string then it returns <0
+			if both strings are same then it returns 0
+compareToIgnoreCase() :-  it is as same compareTo() but it ignores case sensitive.
+concat() :-  this function allows to concatenate two strings. 
+contains() :-  it allows to search a substring within  the string. 
+---------------------
+Write a program to validate PAN Number?
+	rules pan numbers :- 
+		First 5 chars alphabets
+		next 4 chars are digits
+		final 1 char is again alpbhabet
+			total length is 10 chars and all are the capital alpbhabets. 
+
+i/p :- ASDPA1234G
+	Correct pan number
+i/p : A1234BCADA
+	Invalid Pan number
+-------------------------------
+User Defined Methods / Functions:-
+----------------------------------
+Generally  every programming lang is a function based language. 
+So that prog lang gives two types of functions
+
+1. Pre-Defined 	:-  these functions given by the prog lang. 
+2. User Defined :-  these functions created and used by the developer/user as per the requirement. 
+
+purpose of the user defined methods/functions
+
+1.  To avoid complexity of the program, i.e. A big program will be divided into small  no of sub programs so that it is very easy to debug when it gets error. 
+2.  To implements Object Oriented Programming. 
+3.  Reusability of Coding. 
+
+
+To create user defined methods there are two steps
+
+1.  Method Definition :- 
+		the process of creating a method with a task. 
+		<return type>  <method name>([arguments])
+		{
+			body of the method.
+		}
+
+	a.  Method name must be one word.
+	b.  Arguments are the variables which recives values at the time of calling a method.
+		these are may or may not having a method.
+		A method can take any number of arguments.
+	c.  return type is a type where a method is providing final result of the method process. 
+		Sometimes method won't return any value, at that time method  starts with "void" 		keyword. 
+		if function having return type, then we have to specify "data type" of the value. 
+
+
+	Note :-  A function can be defined either above / below of the main() method. 
+	
+
+there are 4 ways to define a function
+
+	A.  Without Arguments and Without Return Value.
+		void Sample()
+		{
+			................
+		}
+	B.  With Aruments and without return value. 
+		void Simple(int x, float y)
+		{
+			.................
+		}
+	C.  With Arguments and with return value. 
+		float SimSam(int x, float y)
+		{
+			......
+			return <expression/value>;	
+		}
+	D.  Without Arguments and with return value.
+		int Sample()
+		{
+			................
+		}
+2.  Method Calling :- 
+		Execution process of user defined method is called Method Calling. 
+			method_name([argument values]);
+		A function called within another function. 
+		Usually Main() method. 
